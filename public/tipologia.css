@@ -17,9 +17,28 @@ body{
   left: 32%;
 }
 .col{
+    
     background-color: white;
+
 }
 .img{
+    display: inline-block;
     background-color: white;
-    width: 20px;
+    width: 100px;
+    left: 0%
+}
+.row1{
+    display: flex;
+  gap: 20px;
+  text-align: right;
+  
+}
+.MBTI{
+    display:inline-block;
+    background-color: red;
+    
+}
+.anagrama{
+    display:inline-block;
+    background-color: aqua;
 }
