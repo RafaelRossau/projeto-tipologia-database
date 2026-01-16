@@ -17,7 +17,26 @@ const db = mysql.createConnection({
   password: "", // Senha (geralmente vazia no XAMPP)
   database: "Tipologia", // Nome do banco que você criou
 });
+//----------------------------->POST<------------------------------------------------
+app.post("/Personagens", (req, res) => {
+  const {nome_adicao, foto_adicao,marcados_MBTI, marcados_anagrama, marcados_subtipo, tritipo, marcados_temperamento, marcados_Big_Five, marcados_alinhamento} = req.body; // Extrai os dados enviados pelo front
+  db.query(
+    "INSERT INTO Personagens ( nome, foto, mbti, anagrama, subtipo, tritipo, temperamento, big_five, alinhamento) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", // Query SQL com placeholders
+    [nome_adicao, foto_adicao,marcados_MBTI, marcados_anagrama, marcados_subtipo, tritipo, marcados_temperamento, marcados_Big_Five, marcados_alinhamento], // Valores que substituem os "?"
+    (err, result) => {
+      if (err) throw err;
+      res.json({ message: "Personagem adicionado com sucesso!" }); // Retorno de sucesso
+    }
+  );
+});
 
+//--------------------------------->GET<---------------------------------
+app.get("/Personagens", (req, res) => {
+  db.query("SELECT * FROM Personagens", (err, results) => {
+    if (err) throw err; // Se der erro na query, interrompe
+    res.json(results); // Envia o resultado como JSON para o front
+  });
+});
 
 app.listen(3000, () =>
   console.log("Servidor rodando em http://localhost:3000/principal.html")

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Personagem</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="tipologia.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar2" style="background-color: grey;">
+  <div class="container-fluid color">
+    <a class="navbar-brand elemento" href="#">Tipologia DataBase</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Funções Cognitivas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Anagramas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Temperamentos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Big Five</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Alinhamentos Morais</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Adicionar personagem/conceito</a>
+        </li>
+    
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Procurar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="pai_fieldset">
+    <fieldset class="principal" style="background-color: white;">
+        <label for="nome_adicao">Nome:</label>
+        <input type="text" id="nome_adicao"><br>
+
+        <label for="foto_adicao">Imagem:</label>
+        <input type="text" id="foto_adicao"><br>
+<div id="escolha">
+    <div id="container">
+    <details id="MBTI_escolha">
+  <summary>MBTI</summary>
+  <label><input type="checkbox" value="ENFJ">ENFJ</label>
+  <label><input type="checkbox" value="ENFP">ENFP</label>
+  <label><input type="checkbox" value="INFJ">INFJ</label>
+  <label><input type="checkbox" value="INFP">INFP</label>
+  <label><input type="checkbox" value="ENTJ">ENTJ</label>
+  <label><input type="checkbox" value="ENTP">ENTP</label>
+  <label><input type="checkbox" value="INTJ">INTJ</label>
+  <label><input type="checkbox" value="INTP">INTP</label>
+  <label><input type="checkbox" value="ESTP">ESTP</label>
+  <label><input type="checkbox" value="ESFP">ESFP</label>
+  <label><input type="checkbox" value="ISTP">ISTP</label>
+  <label><input type="checkbox" value="ISFP">ISFP</label>
+  <label><input type="checkbox" value="ESFJ">ESFJ</label>
+  <label><input type="checkbox" value="ESTJ">ESTJ</label>
+  <label><input type="checkbox" value="ISFJ">ISFJ</label>
+  <label><input type="checkbox" value="ISFJ">ISTJ</label>
+   </details>
+   </div>
+   <div id="container">
+   <details id="Anagrama_escolha">
+    <summary>Anagrama</summary>
+<label><input type="checkbox" value="1w9">1w9</label>
+<label><input type="checkbox" value="1w2">1w2</label>
+<label><input type="checkbox" value="2w1">2w1</label>
+<label><input type="checkbox" value="2w3">2w3</label>
+<label><input type="checkbox" value="3w2">3w2</label>
+<label><input type="checkbox" value="3w4">3w4</label>
+<label><input type="checkbox" value="4w3">4w3</label>
+<label><input type="checkbox" value="4w5">4w5</label>
+<label><input type="checkbox" value="5w4">5w4</label>
+<label><input type="checkbox" value="5w6">5w6</label>
+<label><input type="checkbox" value="6w5">6w5</label>
+<label><input type="checkbox" value="6w7">6w7</label>
+<label><input type="checkbox" value="7w6">7w6</label>
+<label><input type="checkbox" value="7w8">7w8</label>
+<label><input type="checkbox" value="8w7">8w7</label>
+<label><input type="checkbox" value="8w9">8w9</label>
+<label><input type="checkbox" value="8w7">9w8</label>
+<label><input type="checkbox" value="8w9">9w1</label>
+   </details>
+   </div>
+   <div id="container">
+   <details id="subtipo_escolha">
+    <summary>Subtipo</summary>
+<label><input type="checkbox" value="Self Preservation">Self Preservation</label>
+<label><input type="checkbox" value="Social">Social</label>
+<label><input type="checkbox" value="Sexual">Sexual</label>
+<label><input type="checkbox" value="sp/so">sp/so</label>
+<label><input type="checkbox" value="sp/sx">sp/sx</label>
+<label><input type="checkbox" value="so/sp">so/sp</label>
+<label><input type="checkbox" value="so/sx">so/sx</label>
+<label><input type="checkbox" value="sx/sp">sx/sp</label>
+<label><input type="checkbox" value="sx/so">sx/so</label>
+   </details>
+   </div>
+   <div id="tritipo_escolha_div">
+   <label for="tritipo_escolha">Tritipo:</label>
+    <input type="number" id="tritipo_escolha">
+   </div>
+   <div id="container">
+  <details id="temperamento_escolha">
+    <summary>Temperamento</summary>
+    <label><input type="checkbox" value="Sanguíneo">Sanguíneo</label>
+    <label><input type="checkbox" value="Colérico">Colérico</label>
+    <label><input type="checkbox" value="Melancólico">Melancólico</label>
+    <label><input type="checkbox" value="Fleumático">Fleumático</label>
+    <label><input type="checkbox" value="Sanguíneo-Colérico">Sanguíneo-Colérico</label>
+    <label><input type="checkbox" value="Sanguíneo-Melancólico">Sanguíneo-Melancólico</label>
+    <label><input type="checkbox" value="Sanguíneo-Fleumático">Sanguíneo-Fleumático</label>
+    <label><input type="checkbox" value="Colérico-Sanguíneo">Colérico-Sanguíneo</label>
+    <label><input type="checkbox" value="Colérico-Melancólico">Colérico-Melancólico</label>
+    <label><input type="checkbox" value="Colérico-Fleumático">Colérico-Fleumático</label>
+    <label><input type="checkbox" value="Melancólico-Sanguíneo">Melancólico-Sanguíneo</label>
+    <label><input type="checkbox" value="Melancólico-Colérico">Melancólico-Colérico</label>
+    <label><input type="checkbox" value="Melancólico-Fleumático">Melancólico-Fleumático</label>
+    <label><input type="checkbox" value="Fleumático-Sanguíneo">Fleumático-Sanguíneo</label>
+    <label><input type="checkbox" value="Fleumático-Colérico">Fleumático-Colérico</label>
+    <label><input type="checkbox" value="Fleumático-Melancólico">Fleumático-Melancólico</label>
+  </details>
+</div>
+<div id="container">
+  <details id="big_five_escolha">
+    <summary>Big Five (SLOAN)</summary>
+    <label><input type="checkbox" value="RCUAI">RCUAI</label>
+    <label><input type="checkbox" value="RCUAN">RCUAN</label>
+    <label><input type="checkbox" value="RCUEI">RCUEI</label>
+    <label><input type="checkbox" value="RCUEN">RCUEN</label>
+    <label><input type="checkbox" value="RCOAI">RCOAI</label>
+    <label><input type="checkbox" value="RCOAN">RCOAN</label>
+    <label><input type="checkbox" value="RCOEI">RCOEI</label>
+    <label><input type="checkbox" value="RCOEN">RCOEN</label>
+    <label><input type="checkbox" value="RLUAI">RLUAI</label>
+    <label><input type="checkbox" value="RLUAN">RLUAN</label>
+    <label><input type="checkbox" value="RLUEI">RLUEI</label>
+    <label><input type="checkbox" value="RLUEN">RLUEN</label>
+    <label><input type="checkbox" value="RLOAI">RLOAI</label>
+    <label><input type="checkbox" value="RLOAN">RLOAN</label>
+    <label><input type="checkbox" value="RLOEI">RLOEI</label>
+    <label><input type="checkbox" value="RLOEN">RLOEN</label>
+    <label><input type="checkbox" value="SCUAI">SCUAI</label>
+    <label><input type="checkbox" value="SCUAN">SCUAN</label>
+    <label><input type="checkbox" value="SCUEI">SCUEI</label>
+    <label><input type="checkbox" value="SCUEN">SCUEN</label>
+    <label><input type="checkbox" value="SCOAI">SCOAI</label>
+    <label><input type="checkbox" value="SCOAN">SCOAN</label>
+    <label><input type="checkbox" value="SCOEI">SCOEI</label>
+    <label><input type="checkbox" value="SCOEN">SCOEN</label>
+    <label><input type="checkbox" value="SLUAI">SLUAI</label>
+    <label><input type="checkbox" value="SLUAN">SLUAN</label>
+    <label><input type="checkbox" value="SLUEI">SLUEI</label>
+    <label><input type="checkbox" value="SLUEN">SLUEN</label>
+    <label><input type="checkbox" value="SLOAI">SLOAI</label>
+    <label><input type="checkbox" value="SLOAN">SLOAN</label>
+    <label><input type="checkbox" value="SLOEI">SLOEI</label>
+    <label><input type="checkbox" value="SLOEN">SLOEN</label>
+  </div>
+  </details>
+  <div id="container">
+  <details id="alinhamento_escolha">
+    <summary>Alinhamento Moral</summary>
+    <label><input type="checkbox" value="Lawful Good">Lawful Good</label>
+    <label><input type="checkbox" value="Neutral Good">Neutral Good</label>
+    <label><input type="checkbox" value="Chaotic Good">Chaotic Good</label>
+    <label><input type="checkbox" value="Lawful Neutral">Lawful Neutral</label>
+    <label><input type="checkbox" value="True Neutral">True Neutral</label>
+    <label><input type="checkbox" value="Chaotic Neutral">Chaotic Neutral</label>
+    <label><input type="checkbox" value="Lawful Evil">Lawful Evil</label>
+    <label><input type="checkbox" value="Neutral Evil">Neutral Evil</label>
+    <label><input type="checkbox" value="Chaotic Evil">Chaotic Evil</label>
+  </details>
+</div>
+<button onclick="adicionarPersonagem()">Enviar</button>
+</fieldset>
+</div>
+</body>
+<script src="tipologia.js"></script>
+</html>
