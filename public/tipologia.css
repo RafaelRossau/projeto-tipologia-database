@@ -39,3 +39,7 @@ body{
     display:inline-block;
     background-color: aqua;
 }
+#aparecerPersonagemBotao{
+display:flex;
+top: 100px;
+}

@@ -1,3 +1,24 @@
+let url = `http://localhost:3000/Personagens`
+let url2 = `http://localhost:3000/img`
+
+fetch(url)
+    .then(response => response.json())
+        .then(personagens => {
+            const arrayPersonagens = personagens
+            console.log(personagens)
+        })
+const indiceAleatorio1 = Math.floor(Math.random() * this.arrayPersonagens.length);
+const indiceAleatorio2 = Math.floor(Math.random() * personagens.length);
+const indiceAleatorio3 = Math.floor(Math.random() * personagens.length);
+const indiceAleatorio4 = Math.floor(Math.random() * personagens.length);
+const indiceAleatorio5 = Math.floor(Math.random() * personagens.length);
+const indiceAleatorio6 = Math.floor(Math.random() * personagens.length);
+const indiceAleatorio7 = Math.floor(Math.random() * personagens.length);
+const indiceAleatorio8 = Math.floor(Math.random() * personagens.length);
+const indiceAleatorio9 = Math.floor(Math.random() * personagens.length);
+const indiceAleatorio10 = Math.floor(Math.random() * personagens.length);
+const indiceAleatorio11 = Math.floor(Math.random() * personagens.length);
+const indiceAleatorio12 = Math.floor(Math.random() * personagens.length);
 //----------------------------------------------------------> ADIÇÃO DE PERSONAGEM <----------------------------------------------------------------
 
 function adicionarPersonagem(){
@@ -9,7 +30,6 @@ function adicionarPersonagem(){
         return Array.from(selecionados).map(input => input.value);
     };
 const nome_adicao = document.getElementById("nome_adicao").value;
-const foto_adicao = document.getElementById("foto_adicao").value;
 const marcados_MBTI = pegarMarcados("MBTI_escolha")
 const marcados_anagrama =pegarMarcados("Anagrama_escolha");
 const marcados_subtipo = pegarMarcados("subtipo_escolha")
@@ -82,9 +102,264 @@ else{
 fetch("/Personagens", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({nome_adicao, foto_adicao,marcados_MBTI, marcados_anagrama, marcados_subtipo, tritipo, marcados_temperamento, marcados_Big_Five, marcados_alinhamento})
+    body: JSON.stringify({nome_adicao, marcados_MBTI, marcados_anagrama, marcados_subtipo, tritipo, marcados_temperamento, marcados_Big_Five, marcados_alinhamento})
     })
+    const formData = new FormData();
+    const fileInput = document.getElementById("foto_adicao");
+
+    formData.append("foto_adicao", fileInput.files[0]);
+    fetch("/img", {
+    method: "POST",
+    body: formData
+    })
+    .then(res => res.json())
+    .then(data => alert(data.message));
 }
     
 }
+function aparecerPersonagem(){
+    
+    fetch(url)
+    .then(response => response.json())
+        .then(personagens => {
+            if (personagens.length === 0) {
+                alert("Nenhum personagem cadastrado!");
+                return;
+            }
+            const p = personagens[indiceAleatorio1];
+            
+            document.getElementById("nome1").innerText = p.nome;
+            document.getElementById("MBTI1").innerText = p.mbti;
+            document.getElementById("anagrama1").innerText = p.anagrama;
+            document.getElementById("foto1").src = `http://localhost:3000/imagem/${p.id}`
+        })
+        .catch(err => console.error("Erro ao buscar personagens:", err));
+        fetch(url2)
+    .then(response => response.fileInput())
+        .then(img => {
+            if (img.length === 0) {
+                alert("Nenhum personagem cadastrado!");
+                return;
+            }
 
+            
+            const indiceAleatorio = Math.floor(Math.random() * personagens.length);
+            const p = personagens[indiceAleatorio];
+            
+            document.getElementById("nome1").innerText = p.nome;
+            document.getElementById("MBTI1").innerText = p.mbti;
+            document.getElementById("anagrama1").innerText = p.anagrama;
+            document.getElementById("foto1").src = `http://localhost:3000/imagem/${p.id}`
+        })
+        .catch(err => console.error("Erro ao buscar personagens:", err));
+
+        fetch(url)
+    .then(response => response.json())
+        .then(personagens => {
+            if (personagens.length === 0) {
+                alert("Nenhum personagem cadastrado!");
+                return;
+            }
+
+            
+            const indiceAleatorio = Math.floor(Math.random() * personagens.length);
+            const p = personagens[indiceAleatorio];
+            
+            document.getElementById("nome2").innerText = p.nome;
+            document.getElementById("MBTI2").innerText = p.mbti;
+            document.getElementById("anagrama2").innerText = p.anagrama;
+             document.getElementById("foto2").src = `http://localhost:3000/imagem/${p.id}`
+        })
+        .catch(err => console.error("Erro ao buscar personagens:", err));
+
+        fetch(url)
+    .then(response => response.json())
+        .then(personagens => {
+            if (personagens.length === 0) {
+                alert("Nenhum personagem cadastrado!");
+                return;
+            }
+
+            
+            const indiceAleatorio = Math.floor(Math.random() * personagens.length);
+            const p = personagens[indiceAleatorio];
+            
+            document.getElementById("nome3").innerText = p.nome;
+            document.getElementById("MBTI3").innerText = p.mbti;
+            document.getElementById("anagrama3").innerText = p.anagrama;
+             document.getElementById("foto3").src = `http://localhost:3000/imagem/${p.id}`
+        })
+        .catch(err => console.error("Erro ao buscar personagens:", err));
+
+        fetch(url)
+    .then(response => response.json())
+        .then(personagens => {
+            if (personagens.length === 0) {
+                alert("Nenhum personagem cadastrado!");
+                return;
+            }
+
+            
+            const indiceAleatorio = Math.floor(Math.random() * personagens.length);
+            const p = personagens[indiceAleatorio];
+            
+            document.getElementById("nome4").innerText = p.nome;
+            document.getElementById("MBTI4").innerText = p.mbti;
+            document.getElementById("anagrama4").innerText = p.anagrama;
+             document.getElementById("foto4").src = `http://localhost:3000/imagem/${p.id}`
+        })
+        .catch(err => console.error("Erro ao buscar personagens:", err));
+
+        fetch(url)
+    .then(response => response.json())
+        .then(personagens => {
+            if (personagens.length === 0) {
+                alert("Nenhum personagem cadastrado!");
+                return;
+            }
+
+            
+            const indiceAleatorio = Math.floor(Math.random() * personagens.length);
+            const p = personagens[indiceAleatorio];
+            
+            document.getElementById("nome5").innerText = p.nome;
+            document.getElementById("MBTI5").innerText = p.mbti;
+            document.getElementById("anagrama5").innerText = p.anagrama;
+             document.getElementById("foto5").src = `http://localhost:3000/imagem/${p.id}`
+        })
+        .catch(err => console.error("Erro ao buscar personagens:", err));
+
+        fetch(url)
+    .then(response => response.json())
+        .then(personagens => {
+            if (personagens.length === 0) {
+                alert("Nenhum personagem cadastrado!");
+                return;
+            }
+
+            
+            const indiceAleatorio = Math.floor(Math.random() * personagens.length);
+            const p = personagens[indiceAleatorio];
+            
+            document.getElementById("nome6").innerText = p.nome;
+            document.getElementById("MBTI6").innerText = p.mbti;
+            document.getElementById("anagrama6").innerText = p.anagrama;
+             document.getElementById("foto6").src = `http://localhost:3000/imagem/${p.id}`
+        })
+        .catch(err => console.error("Erro ao buscar personagens:", err));
+
+        fetch(url)
+    .then(response => response.json())
+        .then(personagens => {
+            if (personagens.length === 0) {
+                alert("Nenhum personagem cadastrado!");
+                return;
+            }
+
+            
+            const indiceAleatorio = Math.floor(Math.random() * personagens.length);
+            const p = personagens[indiceAleatorio];
+            
+            document.getElementById("nome7").innerText = p.nome;
+            document.getElementById("MBTI7").innerText = p.mbti;
+            document.getElementById("anagrama7").innerText = p.anagrama;
+             document.getElementById("foto7").src = `http://localhost:3000/imagem/${p.id}`
+        })
+        .catch(err => console.error("Erro ao buscar personagens:", err));
+
+        fetch(url)
+    .then(response => response.json())
+        .then(personagens => {
+            if (personagens.length === 0) {
+                alert("Nenhum personagem cadastrado!");
+                return;
+            }
+
+            
+            const indiceAleatorio = Math.floor(Math.random() * personagens.length);
+            const p = personagens[indiceAleatorio];
+            
+            document.getElementById("nome8").innerText = p.nome;
+            document.getElementById("MBTI8").innerText = p.mbti;
+            document.getElementById("anagrama8").innerText = p.anagrama;
+             document.getElementById("foto8").src = `http://localhost:3000/imagem/${p.id}`
+        })
+        .catch(err => console.error("Erro ao buscar personagens:", err));
+
+        fetch(url)
+    .then(response => response.json())
+        .then(personagens => {
+            if (personagens.length === 0) {
+                alert("Nenhum personagem cadastrado!");
+                return;
+            }
+
+            
+            const indiceAleatorio = Math.floor(Math.random() * personagens.length);
+            const p = personagens[indiceAleatorio];
+            
+            document.getElementById("nome9").innerText = p.nome;
+            document.getElementById("MBTI9").innerText = p.mbti;
+            document.getElementById("anagrama9").innerText = p.anagrama;
+             document.getElementById("foto9").src = `http://localhost:3000/imagem/${p.id}`
+        })
+        .catch(err => console.error("Erro ao buscar personagens:", err));
+
+        fetch(url)
+    .then(response => response.json())
+        .then(personagens => {
+            if (personagens.length === 0) {
+                alert("Nenhum personagem cadastrado!");
+                return;
+            }
+
+            
+            const indiceAleatorio = Math.floor(Math.random() * personagens.length);
+            const p = personagens[indiceAleatorio];
+            
+            document.getElementById("nome10").innerText = p.nome;
+            document.getElementById("MBTI10").innerText = p.mbti;
+            document.getElementById("anagrama10").innerText = p.anagrama;
+            document.getElementById("foto10").src = `http://localhost:3000/imagem/${p.id}`
+        })
+        .catch(err => console.error("Erro ao buscar personagens:", err));
+
+        fetch(url)
+    .then(response => response.json())
+        .then(personagens => {
+            if (personagens.length === 0) {
+                alert("Nenhum personagem cadastrado!");
+                return;
+            }
+
+            
+            const indiceAleatorio = Math.floor(Math.random() * personagens.length);
+            const p = personagens[indiceAleatorio];
+            
+            document.getElementById("nome11").innerText = p.nome;
+            document.getElementById("MBTI11").innerText = p.mbti;
+            document.getElementById("anagrama11").innerText = p.anagrama;
+            document.getElementById("foto11").src = `http://localhost:3000/imagem/${p.id}`
+        })
+        .catch(err => console.error("Erro ao buscar personagens:", err));
+
+        fetch(url)
+    .then(response => response.json())
+        .then(personagens => {
+            if (personagens.length === 0) {
+                alert("Nenhum personagem cadastrado!");
+                return;
+            }
+
+            
+            const indiceAleatorio = Math.floor(Math.random() * personagens.length);
+            const p = personagens[indiceAleatorio];
+            
+            document.getElementById("nome12").innerText = p.nome;
+            document.getElementById("MBTI12").innerText = p.mbti;
+            document.getElementById("anagrama12").innerText = p.anagrama;
+            document.getElementById("foto12").src = `http://localhost:3000/imagem/${p.id}`
+        .catch(err => console.error("Erro ao buscar personagens:", err));
+
+})
+}
