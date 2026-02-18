@@ -1,24 +1,7 @@
 let url = `http://localhost:3000/Personagens`
 let url2 = `http://localhost:3000/img`
 
-fetch(url)
-    .then(response => response.json())
-        .then(personagens => {
-            const arrayPersonagens = personagens
-            console.log(personagens)
-        })
-const indiceAleatorio1 = Math.floor(Math.random() * this.arrayPersonagens.length);
-const indiceAleatorio2 = Math.floor(Math.random() * personagens.length);
-const indiceAleatorio3 = Math.floor(Math.random() * personagens.length);
-const indiceAleatorio4 = Math.floor(Math.random() * personagens.length);
-const indiceAleatorio5 = Math.floor(Math.random() * personagens.length);
-const indiceAleatorio6 = Math.floor(Math.random() * personagens.length);
-const indiceAleatorio7 = Math.floor(Math.random() * personagens.length);
-const indiceAleatorio8 = Math.floor(Math.random() * personagens.length);
-const indiceAleatorio9 = Math.floor(Math.random() * personagens.length);
-const indiceAleatorio10 = Math.floor(Math.random() * personagens.length);
-const indiceAleatorio11 = Math.floor(Math.random() * personagens.length);
-const indiceAleatorio12 = Math.floor(Math.random() * personagens.length);
+
 //----------------------------------------------------------> ADIÇÃO DE PERSONAGEM <----------------------------------------------------------------
 
 function adicionarPersonagem(){
@@ -126,23 +109,6 @@ function aparecerPersonagem(){
                 alert("Nenhum personagem cadastrado!");
                 return;
             }
-            const p = personagens[indiceAleatorio1];
-            
-            document.getElementById("nome1").innerText = p.nome;
-            document.getElementById("MBTI1").innerText = p.mbti;
-            document.getElementById("anagrama1").innerText = p.anagrama;
-            document.getElementById("foto1").src = `http://localhost:3000/imagem/${p.id}`
-        })
-        .catch(err => console.error("Erro ao buscar personagens:", err));
-        fetch(url2)
-    .then(response => response.fileInput())
-        .then(img => {
-            if (img.length === 0) {
-                alert("Nenhum personagem cadastrado!");
-                return;
-            }
-
-            
             const indiceAleatorio = Math.floor(Math.random() * personagens.length);
             const p = personagens[indiceAleatorio];
             
@@ -152,7 +118,7 @@ function aparecerPersonagem(){
             document.getElementById("foto1").src = `http://localhost:3000/imagem/${p.id}`
         })
         .catch(err => console.error("Erro ao buscar personagens:", err));
-
+        
         fetch(url)
     .then(response => response.json())
         .then(personagens => {
@@ -168,7 +134,7 @@ function aparecerPersonagem(){
             document.getElementById("nome2").innerText = p.nome;
             document.getElementById("MBTI2").innerText = p.mbti;
             document.getElementById("anagrama2").innerText = p.anagrama;
-             document.getElementById("foto2").src = `http://localhost:3000/imagem/${p.id}`
+            document.getElementById("foto2").src = `http://localhost:3000/imagem/${p.id}`
         })
         .catch(err => console.error("Erro ao buscar personagens:", err));
 
